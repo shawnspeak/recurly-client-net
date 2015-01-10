@@ -1,6 +1,8 @@
 Unreleased
 ==================
 
+* added; `invoice.InvoiceNumberPrefix` and `invoice.InvoiceNumberWithPrefix()`
+
 1.1.8 (stable) / 2015-01-26
 ==================
 

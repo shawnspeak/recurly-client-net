@@ -15,7 +15,7 @@ namespace Recurly.Configuration
         public string Subdomain { get; private set; }
         public int PageSize { get; private set; }
 
-        protected const string RecurlyServerUri = "http://{0}.lvh.me:3000/v2{1}";
+        protected const string RecurlyServerUri = "https://{0}.recurly.com/v2{1}";
 
         // static, unlikely to change
         public string UserAgent

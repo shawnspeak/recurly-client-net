@@ -643,9 +643,13 @@ namespace Recurly
 
         protected void WriteSubscriptionNotesXml(XmlTextWriter xmlWriter)
         {
+            xmlWriter.WriteStartElement("subscription"); // Start: subscription
+
             xmlWriter.WriteElementString("customer_notes", CustomerNotes);
             xmlWriter.WriteElementString("terms_and_conditions", TermsAndConditions);
             xmlWriter.WriteElementString("vat_reverse_charge_notes", VatReverseChargeNotes);
+
+            xmlWriter.WriteEndElement(); // End: subscription
         }
 
         #endregion

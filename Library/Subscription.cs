@@ -347,8 +347,18 @@ namespace Recurly
 
         public bool UpdateNotes(String customerNotes, String termsAndConditions, String vatReverseChargeNotes)
         {
+
+            if (customerNotes != null)
+                CustomerNotes = customerNotes;
+
+            if (termsAndConditions != null)
+                TermsAndConditions = termsAndConditions;
+
+            if (customerNotes != null)
+                VatReverseChargeNotes = vatReverseChargeNotes;
+
             Client.Instance.PerformRequest(Client.HttpRequestMethod.Put,
-                UrlPrefix + "notes",
+                UrlPrefix + Uri.EscapeUriString(Uuid) + "/notes",
                 WriteSubscriptionNotesXml,
                 ReadXml);
 
